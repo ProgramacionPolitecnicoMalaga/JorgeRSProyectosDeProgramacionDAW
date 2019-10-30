@@ -21,29 +21,19 @@ public class Cola {
                 tail = -1;
                 head = -1;
             }
-<<<<<<< HEAD:POO/Act13ExcepcionesCola/src/Cola.java
         } else {
             tail = -1;
             head = -1;
             throw new SacarElementoDeColaVaciaException("No hay elementos", head);
         }
-=======
-
-        } else
-            throw new ExcepcionColaVacia("La cola ya esta vacia", head);
->>>>>>> origin/master:Act13ExcepcionesCola/src/Cola.java
         return elemento;
     }
 
     public void meter(int nuevoElemento){
         if (estaVacia()){
-<<<<<<< HEAD:POO/Act13ExcepcionesCola/src/Cola.java
             tail = 0;
             head=0;
-=======
-            head = 0;
-            tail = 0;
->>>>>>> origin/master:Act13ExcepcionesCola/src/Cola.java
+
         }else if (!estaLlena()){
             tail++;
             if (tail == elementos.length)
