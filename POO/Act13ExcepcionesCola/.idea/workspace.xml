@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fa42f9-6467-455f-a1b3-d47170367519" name="Default Changelist" comment="">
-<<<<<<< HEAD:POO/Act13ExcepcionesCola/.idea/workspace.xml
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/Cola.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/out/production/Cola/Cola.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/out/production/Cola/ConsumidorCola.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/out/production/Cola/ExcepcionColaVacia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/Cola.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/ConsumidorCola.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/ExcepcionColaVacia.java" beforeDir="false" />
-=======
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cola.java" afterDir="false" />
->>>>>>> origin/master:Act13ExcepcionesCola/.idea/workspace.xml
+      <change beforePath="$PROJECT_DIR$/out/production/Cola/Cola.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cola/Cola.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cola/META-INF/Cola.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +29,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -84,11 +78,9 @@
       <workItem from="1572353438861" duration="1881000" />
       <workItem from="1572369482565" duration="634000" />
       <workItem from="1572420477623" duration="2439000" />
-<<<<<<< HEAD:POO/Act13ExcepcionesCola/.idea/workspace.xml
-      <workItem from="1572427820637" duration="3831000" />
-=======
-      <workItem from="1572433165559" duration="644000" />
->>>>>>> origin/master:Act13ExcepcionesCola/.idea/workspace.xml
+      <workItem from="1572433165559" duration="1471000" />
+      <workItem from="1572442203248" duration="32000" />
+      <workItem from="1572451729293" duration="47000" />
     </task>
     <servers />
   </component>
@@ -107,5 +99,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
