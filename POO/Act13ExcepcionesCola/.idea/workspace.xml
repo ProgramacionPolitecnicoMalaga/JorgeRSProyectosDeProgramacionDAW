@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fa42f9-6467-455f-a1b3-d47170367519" name="Default Changelist" comment="">
+<<<<<<< HEAD:POO/Act13ExcepcionesCola/.idea/workspace.xml
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/.idea/uiDesigner.xml" beforeDir="false" />
@@ -14,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/Cola.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/ConsumidorCola.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Act13ExcepcionesCola/src/ExcepcionColaVacia.java" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cola.java" afterDir="false" />
+>>>>>>> origin/master:Act13ExcepcionesCola/.idea/workspace.xml
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +84,11 @@
       <workItem from="1572353438861" duration="1881000" />
       <workItem from="1572369482565" duration="634000" />
       <workItem from="1572420477623" duration="2439000" />
+<<<<<<< HEAD:POO/Act13ExcepcionesCola/.idea/workspace.xml
       <workItem from="1572427820637" duration="3831000" />
+=======
+      <workItem from="1572433165559" duration="644000" />
+>>>>>>> origin/master:Act13ExcepcionesCola/.idea/workspace.xml
     </task>
     <servers />
   </component>
