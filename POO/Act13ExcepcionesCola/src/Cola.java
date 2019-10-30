@@ -9,7 +9,7 @@ public class Cola {
         elementos = new int[tamanoCola];
     }
 
-    public int sacar() throws ExcepcionColaVacia {
+    public int sacar() throws SacarElementoDeColaVaciaException {
         int elemento;
         if (!estaVacia()) {
             elemento = elementos[head];
@@ -17,14 +17,22 @@ public class Cola {
             if (head == elementos.length)
                 head = 0;
             elementosAlmacenados--;
-        } else
-            throw new ExcepcionColaVacia("La cola ya esta vacia", head);
+            if (elementosAlmacenados == 0){
+                tail = -1;
+                head = -1;
+            }
+        } else {
+            tail = -1;
+            head = -1;
+            throw new SacarElementoDeColaVaciaException("No hay elementos", head);
+        }
         return elemento;
     }
 
     public void meter(int nuevoElemento){
         if (estaVacia()){
-            tail = head;
+            tail = 0;
+            head=0;
         }else if (!estaLlena()){
             tail++;
             elementosAlmacenados++;

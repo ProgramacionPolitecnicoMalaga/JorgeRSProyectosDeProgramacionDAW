@@ -5,14 +5,17 @@ public class ConsumidorCola {
     public static void main(String[] args) {
         try {
         cola = new Cola(TAM_COLA);
+
         cola.meter(10);
         System.out.println(cola);
         cola.sacar();
         System.out.println(cola);
         cola.sacar();
         System.out.println(cola);
+        cola.meter(10);
+        System.out.println(cola);
 
-        }catch (ExcepcionColaVacia e){
+        }catch (SacarElementoDeColaVaciaException e){
             System.out.println(e.advertenciaExcepcion());
         }
 
