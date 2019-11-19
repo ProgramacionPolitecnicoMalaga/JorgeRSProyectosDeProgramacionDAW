@@ -22,7 +22,7 @@ public class MapAirports {
     private JPanel panelMain;
     private JLabel lblPais;
     private JMapViewer map;
-    private NodeList nodos;
+    private static NodeList nodos;
 
     public MapAirports() {
         butBuscar.addActionListener(new ActionListener() {
@@ -32,10 +32,14 @@ public class MapAirports {
                 map.removeAllMapMarkers();
                 for (int i=0; i < nodos.getLength(); i++){
                     if (pais.compareToIgnoreCase(nodos.item(i).getAttributes().getNamedItem("pais").getNodeValue())==0){
-                        double lat=Double.parseDouble(nodos.item(i).getAttributes().getNamedItem("lat").getNodeValue());
-                        double lon=Double.parseDouble(nodos.item(i).getAttributes().getNamedItem("lon").getNodeValue());
-                        map.addMapMarker(new MapMarkerDot(lat, lon));
-                        map.setDisplayToFitMapMarkers();
+                        if (isNumeric(nodos.item(i).getAttributes().getNamedItem("lat").getNodeValue())&&isNumeric(nodos.item(i).getAttributes().getNamedItem("lon").getNodeValue())) {
+                            double lat=Double.parseDouble(nodos.item(i).getAttributes().getNamedItem("lat").getNodeValue());
+                            double lon=Double.parseDouble(nodos.item(i).getAttributes().getNamedItem("lon").getNodeValue());
+                            map.addMapMarker(new MapMarkerDot(lat, lon));
+                            map.setDisplayToFitMapMarkers();
+                        } else {
+                        butBuscar.grabFocus();
+                        }
                     }
                 }
             }
@@ -62,13 +66,13 @@ public class MapAirports {
             NodeList nodos = doc.getElementsByTagName("aeropuerto");
             return nodos;
         } catch (ParserConfigurationException e) {
-            return null;
+            e.printStackTrace();
         } catch (SAXException e) {
-            return null;
+            e.printStackTrace();
         } catch (IOException e) {
-            return null;
+            e.printStackTrace();
         }
-
+        return nodos;
     }
 
     private void createUIComponents() {
@@ -90,5 +94,9 @@ public class MapAirports {
                 paisActual = pais;
             }
         }
+    }
+
+    public static boolean isNumeric(String str) {
+        return (str.matches("[+-]?\\d*(\\.\\d+)?") && str.equals("")==false);
     }
 }
