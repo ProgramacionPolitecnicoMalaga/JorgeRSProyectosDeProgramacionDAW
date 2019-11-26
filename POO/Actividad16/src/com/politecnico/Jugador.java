@@ -9,13 +9,14 @@ public class Jugador {
     private int casillaActual;
     private int numeroDeMovimientosTotales=0;
     LinkedList historialMovimientos;
-    LinkedList redoUndo=new LinkedList();
+    LinkedList redoUndo;
 
     public Jugador(String color, String nombreJugador){
         this.color=color;
         this.nombreJugador=nombreJugador;
         casillaActual=0;
         historialMovimientos=new LinkedList();
+        redoUndo=new LinkedList();
     }
 
     public String getColor() {

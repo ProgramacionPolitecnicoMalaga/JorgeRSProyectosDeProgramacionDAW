@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94e5a517-1b0d-4536-8f9d-bf58a3e5b89a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/politecnico/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/politecnico/Jugador.java" afterDir="false" />
-    </list>
+    <list default="true" id="66374352-01b5-4e75-8d23-1688c83c9dad" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,20 +11,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="ProjectId" id="1TcJmEpYk1iwXWgvAYAz4gweVWT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1U4RnXNlfODfQ2vSNMRUjWx67IP" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArrayListVSLinkedList" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -45,9 +40,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.politecnico.Main" />
-      <module name="Actividad16" />
+    <configuration name="ConversorCSVtoXML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.politecnico.ConversorCSVtoXML" />
+      <module name="ConversorCSVtoXML" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.politecnico.*" />
@@ -60,7 +55,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ConversorCSVtoXML" />
       </list>
     </recent_temporary>
   </component>
@@ -69,33 +64,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="94e5a517-1b0d-4536-8f9d-bf58a3e5b89a" name="Default Changelist" comment="" />
-      <created>1573753606348</created>
+      <changelist id="66374352-01b5-4e75-8d23-1688c83c9dad" name="Default Changelist" comment="" />
+      <created>1574614047682</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573753606348</updated>
-      <workItem from="1573753609845" duration="2273000" />
-      <workItem from="1574002028077" duration="599000" />
-      <workItem from="1574005511824" duration="9177000" />
-      <workItem from="1574161226425" duration="986000" />
-      <workItem from="1574680536431" duration="2057000" />
+      <updated>1574614047682</updated>
+      <workItem from="1574614053639" duration="7237000" />
+      <workItem from="1574789411661" duration="8523000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
