@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleado dni="77585514G" nombre="Pepe Ramirez">
+    <tiempo_dedicado>30.0</tiempo_dedicado>
+    <descripcion>Realizado metodos de gestion de datos</descripcion>
+    <proyecto>Tago</proyecto>
+</empleado>

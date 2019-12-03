@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectos>
+    <proyecto nombre="Alphasec" departamento="Seguridad" fprod="2.5">Descripción</proyecto>
+    <proyecto nombre="Merino" departamento="Administracion" fprod="1.5">Descripción</proyecto>
+    <proyecto nombre="Tago" departamento="Desarrollo" fprod="5.5">Descripción</proyecto>
+</proyectos>

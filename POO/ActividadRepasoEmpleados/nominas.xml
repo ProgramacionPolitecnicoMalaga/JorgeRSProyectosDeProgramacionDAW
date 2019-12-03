@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+    <empleado dni="77585514G" nombre="Pepe Ramirez" productividad="165.0" sueldo_base="2500.0" sueldo_total="2665.0"/>
+    <empleado dni="24558861C" nombre="Pedro Perez" productividad="0.0" sueldo_base="1800.0" sueldo_total="1800.0"/>
+</empleados>
