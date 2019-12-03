@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<proyecto nombre="Tago">
+    <departamento>Desarrollo</departamento>
+    <descripcion>Descripción</descripcion>
+    <empleado nombre="Pepe Ramirez">
+        <duracion>30.0</duracion>
+        <actividad>Realizado metodos de gestion de datos</actividad>
+    </empleado>
+</proyecto>

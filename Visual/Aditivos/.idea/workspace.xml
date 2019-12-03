@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29234572-f5a6-4f1d-90c8-d1037e1dd000" name="Default Changelist" comment="" />
+    <list default="true" id="941309aa-32a1-4398-a4d9-3d2c8bd6c0aa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,24 +11,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1UORMMbkY5xny6UGMMftjuPKqBU" />
+  <component name="ProjectId" id="1UO0B6f4zk5l3Va8e43B2OL6klU" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Visual/AppMundo" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BusquedaCSV" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Módulo SDAW\Programacion\Programacion OO\ActividadRepasoEmpleados" />
+      <recent name="D:\Módulo SDAW\Programacion\Visual\Aditivos\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -44,35 +43,26 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="AppMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AppMain" />
-      <module name="ActividadRepasoEmpleados" />
+    <configuration name="Aditivos" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Aditivos" />
+      <module name="Aditivos" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.AppMain" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="29234572-f5a6-4f1d-90c8-d1037e1dd000" name="Default Changelist" comment="" />
-      <created>1575225605595</created>
+      <changelist id="941309aa-32a1-4398-a4d9-3d2c8bd6c0aa" name="Default Changelist" comment="" />
+      <created>1575212195369</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575225605595</updated>
-      <workItem from="1575225608301" duration="3831000" />
-      <workItem from="1575284337510" duration="5944000" />
-      <workItem from="1575307653894" duration="11741000" />
-      <workItem from="1575364883586" duration="2914000" />
-      <workItem from="1575372412215" duration="1407000" />
-      <workItem from="1575393747962" duration="2293000" />
+      <updated>1575212195369</updated>
+      <workItem from="1575212198748" duration="11801000" />
+      <workItem from="1575393987388" duration="1581000" />
     </task>
     <servers />
   </component>

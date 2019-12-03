@@ -12,5 +12,6 @@ public class AppMain {
         actividades.introducirActividad(new Actividad(30.0, "Realizado metodos de gestion de datos", empleado1, proyectos.getProyecto(2)));
         empleados.crearNomina(actividades.getListaActividades());
         empleados.crearListActEmpleado(actividades.getListaActividades(),empleado1);
+        proyectos.crearListActProyecto(actividades.getListaActividades(), proyectos.getProyecto(2));
     }
 }
