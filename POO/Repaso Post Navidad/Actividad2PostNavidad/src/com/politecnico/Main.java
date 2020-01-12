@@ -45,9 +45,11 @@ public class Main {
                 case 3:
                     int mayorVenta=listadoComerciales.buscarMayorVentaEnUnDia();
                     listadoComerciales.listaDeComercialesConMayorVenta();
-                    Iterator<Comercial>it3=listadoComerciales.getListadoDeComerciales().iterator();
+                    Iterator<Comercial>it3=listadoComerciales.listaDeComercialesConMayorVenta().iterator();
                     while (it3.hasNext()){
-                        System.out.println("\n"+it3.next().getNombre()
+                        Comercial comercialTemp=it3.next();
+
+                        System.out.println(comercialTemp.toString()
                                         +" es el/la comercial comercial de la semana con "
                                         + mayorVenta +" items en un día");
                     }
@@ -72,6 +74,7 @@ public class Main {
                     System.out.println("Venta número 5:");
                     ventas[4] = lectorTeclado.nextInt();
                     Comercial comercial=new Comercial(nombre, apellido, ventas);
+                    listadoComerciales.añadirComercialAListado(comercial);
                     interfazUsuario.registradoConExito();
                     interfazUsuario.menuPrincipal();
                     opcion=lectorTeclado.nextInt();

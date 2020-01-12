@@ -46,11 +46,4 @@ public class ListadoComerciales {
         }
         return listaComercialesConMayorVenta;
     }
-
-    @Override
-    public String toString() {
-        return "ListadoComerciales{" +
-                "listadoComerciales=" + listadoComerciales +
-                '}';
-    }
 }
