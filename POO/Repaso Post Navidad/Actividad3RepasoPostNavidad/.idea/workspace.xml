@@ -19,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Actividad 6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Actividad3RepasoPostNavidadOptimizada" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -67,6 +67,10 @@
       <option name="presentableId" value="Default" />
       <updated>1578913864076</updated>
       <workItem from="1578913867476" duration="6211000" />
+      <workItem from="1578995069520" duration="1702000" />
+      <workItem from="1579000589014" duration="1367000" />
+      <workItem from="1579451344879" duration="358000" />
+      <workItem from="1579455077613" duration="4205000" />
     </task>
     <servers />
   </component>

@@ -15,20 +15,22 @@ public class Main {
                 float horasTrabajadas=interfazUsuario.pedirHorasTrabajadasEmpleado();
                 int numVentas=interfazUsuario.pedirNumVentasEmpleado();
                 interfazUsuario.mensajeRegistroConExito();
+                CalculadorSalario calc;
                 switch (opcion){
                     case 1:
-                        Empleado empleadoComisionado=new Comisionado(nombre, apellidos, horasTrabajadas, numVentas);
-                        listadoEmpleados.añadirEmpleado(empleadoComisionado);
+                        calc = new CalculadoraComisionado();
                         break;
                     case 2:
-                        Empleado empleadoPorHoras=new PorHoras(nombre, apellidos, horasTrabajadas, numVentas);
-                        listadoEmpleados.añadirEmpleado(empleadoPorHoras);
+                        calc = new CalculadoraPorHoras();
                         break;
                     case 3:
-                        Empleado empleadoAsalariado=new Asalariado(nombre, apellidos, horasTrabajadas, numVentas);
-                        listadoEmpleados.añadirEmpleado(empleadoAsalariado);
+                        calc = new CalculadoraAsalariado();
                         break;
+                    default:
+                        calc = null;
                 }
+                listadoEmpleados.añadirEmpleado(new Empleado(nombre, apellidos, horasTrabajadas, numVentas, calc));
+
             } else if (opcion==4){
                 listadoEmpleados.mostrarInformeEmpleados();
             }
