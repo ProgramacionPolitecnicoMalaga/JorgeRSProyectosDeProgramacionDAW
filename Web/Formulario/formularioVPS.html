@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Formulario VPS</title>
+    <meta charset="utf-8">
+	<script src="jquery-3.4.1.js"></script>
+	<script type="text/javascript">
+    function checkText(idText) {
+		return $("#" + idText).val().length > 0 ? true : false;	
+	}
+	function validacion(){
+		if (!checkText('txtNombre')) {
+			alert("El Nombre esta vacio");
+			return false;
+		}
+		if (!checkText('txtObservaciones')) {
+			alert("Las observaciones estan vacias");
+			return false;
+		}
+		if ($("#selEdad").val()==0) {
+			alert("Seleccione una edad correcta");
+			return false;
+		}
+		return true;
+	}
+	</script>
+	
+</head>
+<body>
+
+	<form name="frmDatos" id="frmDatos" action="http://vps456458.ovh.net:8080/src/receptor.jsp" method="post"  onsubmit="return validacion();">
+		<label>Nombre</label>
+		<input type="text" name="txtNombre" id="txtNombre" size="20"/>
+		<label>Apellidos</label>
+		<input type="text" name="txtApellidos" id="txtApellidos" size="40"/>
+		<br><br>
+		<label>Edad</label>
+		<select name="selEdad" id="selEdad">
+			<option value="0"></option>
+			<option value="18">18 años</option>
+			<option value="19">19 años</option>
+			<option value="20">20 años</option>
+			<option value="21">21 años</option>
+			<option value="22">22 años</option>
+			<option value="23">23 años</option>
+			<option value="24">24 años</option>
+			<option value="25">25 años</option>
+			<option value="26">26 años</option>
+			<option value="27">27 años</option>
+			<option value="28">28 años</option>
+			<option value="29">29 años</option>
+			<option value="30">30 años</option>
+			<option value="+">Más 30 años</option>
+		</select>
+		<br><br>
+		<label>Sexo:</label><br>
+			Hombre<input type="radio" value="hombre" name="genero" id="hombre"/><br>
+			Mujer<input type="radio" value="mujer" name="genero" id="mujer"/><br>
+			No especificar<input type="radio" value="ninguno" name="genero" id="noEspecificado" checked="checked"/>
+		<br><br>
+		<label>Observaciones:</label><br>
+		<textarea name="txtObservaciones" id="txtObservaciones" cols="60" rows="6" placeholder="Mínimo 12 caracteres"></textarea>
+		<br>
+		<input type="submit" id="enviar" value="Enviar"/>
+	</form>
+
+</body>
+</html>
