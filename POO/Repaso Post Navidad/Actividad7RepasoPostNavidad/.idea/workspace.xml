@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcef6ba0-62d9-4dc3-85cb-ae86e848f355" name="Default Changelist" comment="" />
+    <list default="true" id="89250ad7-a688-4dcc-b82f-7389b2602d37" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,17 +11,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1XGeg2aEGuDIVhFYLZC3GZLAZqp" />
+  <component name="ProjectId" id="1XNZHHjvzP7JUSKI2A6n9Em6uR5" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Web/jsp" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Visual/BusquedaCSV" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -39,42 +38,29 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Cafeteria" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Actividad6RepasoPostNavidad" />
+      <module name="Actividad7RepasoPostNavidad" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fcef6ba0-62d9-4dc3-85cb-ae86e848f355" name="Default Changelist" comment="" />
-      <created>1580676965342</created>
+      <changelist id="89250ad7-a688-4dcc-b82f-7389b2602d37" name="Default Changelist" comment="" />
+      <created>1580888422999</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580676965342</updated>
-      <workItem from="1580676967764" duration="1478000" />
-      <workItem from="1580729595756" duration="7511000" />
-      <workItem from="1580752289238" duration="3225000" />
-      <workItem from="1580767233025" duration="340000" />
-      <workItem from="1580767767169" duration="321000" />
-      <workItem from="1580808262727" duration="2300000" />
-      <workItem from="1580814024853" duration="2619000" />
-      <workItem from="1580818913499" duration="870000" />
-      <workItem from="1580888365368" duration="672000" />
-      <workItem from="1581180682760" duration="1755000" />
-      <workItem from="1581262570959" duration="599000" />
-      <workItem from="1581270972673" duration="1296000" />
-      <workItem from="1581285460985" duration="1712000" />
+      <updated>1580888422999</updated>
+      <workItem from="1580888440566" duration="6854000" />
+      <workItem from="1581180688886" duration="1358000" />
+      <workItem from="1581262576072" duration="4172000" />
+      <workItem from="1581270978662" duration="9989000" />
+      <workItem from="1581285468134" duration="1773000" />
     </task>
     <servers />
   </component>
