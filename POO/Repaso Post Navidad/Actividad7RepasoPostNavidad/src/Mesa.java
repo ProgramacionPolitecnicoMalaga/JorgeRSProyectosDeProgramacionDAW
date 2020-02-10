@@ -55,10 +55,7 @@ public class Mesa {
 
     @Override
     public String toString() {
-        return "Mesa{" +
-                "numMesa=" + numMesa +
-                ", cerrada=" + cerrada +
-                ", productosConsumidos=" + productosConsumidos +
-                '}';
+        return "\nMesa " + numMesa +
+                "\nProductosConsumidos: " + productosConsumidos;
     }
 }

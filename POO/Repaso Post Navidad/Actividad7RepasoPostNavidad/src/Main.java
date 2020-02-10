@@ -61,10 +61,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (numMesaSeleccionada != -1) {
-                    Mesa mesa = cafeteria.getMesaPorNumero(numMesaSeleccionada);
                     String nombreProducto = comboBoxProductos.getSelectedItem().toString();
-                    Producto producto = cafeteria.getCarta().get(nombreProducto);
-                    mesa.addProductoConsumido(producto);
+                    cafeteria.addProductoAMesa(numMesaSeleccionada, nombreProducto);
                     actualizaTextAreaMesa();
                 }
             }
