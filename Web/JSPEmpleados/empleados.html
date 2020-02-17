@@ -1,0 +1,187 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://vps456458.ovh.net/dwes/resources/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://vps456458.ovh.net/dwes/resources/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="http://vps456458.ovh.net/dwes/resources/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form>
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <label class="sr-only" for="txtNombre">Name</label>
+            <input type="text" class="form-control mb-2" id="txtNombre" placeholder="Nombre empleado">
+        </div>
+        <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-2" id="butEnviar" onclick="Consultar()">Consultar</button>
+        </div>
+    </div>
+    <br>
+    <div class="col-auto">
+        <button type="button" class="btn btn-primary mb-2" id="butAñadir" onclick="MostrarCrear()" data-toggle='modal' data-target='#modalUpdate'>Crear nueva entrada de empleado</button>
+    </div>
+    <div id="divResult"></div>
+    <div class="modal" tabindex="-1" role="dialog" id="modalUpdate">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Datos de empleado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <p>Modifica los siguientes campos del empleado con ID=<span id="id_empleado"></span></p>
+                    <div class="form-group">
+                        <label for="nombre_empleado">Nombre:</label>
+                        <input type="text" name="nombre_empleado" id="nombre_empleado">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos_empleado">Apellidos: </label>
+                        <input type="text" name="apellidos_empleado" id="apellidos_empleado">
+                    </div>
+                    <div class="form-group">
+                        <label for="fn_empleado">Fecha de nacimiento (AAAA-MM-DD):</label>
+                        <input type="text" name="fn_empleado" id="fn_empleado">
+                    </div>
+                </div>
+                <div class="modal-body" id="modal-body2" style="display: none">
+                    <p>Inserta los siguientes campos del empleado:</p>
+                    <div class="form-group">
+                        <label for="nombre_empleado_vacio">Nombre:</label>
+                        <input type="text" name="nombre_empleado_vacio" id="nombre_empleado_vacio">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos_empleado_vacio">Apellidos: </label>
+                        <input type="text" name="apellidos_empleado_vacio" id="apellidos_empleado_vacio">
+                    </div>
+                    <div class="form-group">
+                        <label for="fn_empleado_vacio">Fecha de nacimiento (AAAA-MM-DD):</label>
+                        <input type="text" name="fn_empleado_vacio" id="fn_empleado_vacio">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" onclick="Update()">Modificar</button>
+                    <button type="button" class="btn btn-primary" id="btnCreate" onclick="Añadir()" style="display: none">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script>
+    let create = false;
+    let modify=true;
+    function MostrarCrear() {
+        create=true;
+        modify=false;
+        $("#modal-body").css("display", "none");
+        $("#btnUpdate").css("display", "none");
+        $("#modal-body2").css("display", "block");
+        $("#btnCreate").css("display", "block");
+    }
+
+    function MostrarModificar() {
+        create=false;
+        modify=true;
+        $("#modal-body").css("display", "block");
+        $("#btnUpdate").css("display", "block");
+        $("#modal-body2").css("display", "none");
+        $("#btnCreate").css("display", "none");
+    }
+    
+    function Consultar() {
+        var str = $("#txtNombre").val();
+        $("#butEnviar").attr("disabled", true);
+        $.ajax({
+            type: "POST",
+            url: "empleados.jsp",
+            data: {"str": str, "accion": "read"}
+        }).done(function (response) {
+            var result = JSON.parse(response);
+            if (result.status == 'ok') {
+                $("#divResult").html(result.html);
+            } else {
+                $("#divResult").html(result.mensaje);
+            }
+            $("#butEnviar").attr("disabled", false);
+        });
+    }
+
+    function Eliminar(idRegistro) {
+        var str = $("#txtNombre").val();
+        $.ajax({
+            type: "POST",
+            url: "empleados.jsp",
+            data: {"idRegistro": idRegistro, "str": str, "accion": "delete"}
+        }).done(function (response) {
+            var result = JSON.parse(response);
+            if (result.status == 'ok') {
+                $("#divResult").html(result.html);
+            } else {
+                $("#divResult").html(result.mensaje);
+            }
+        });
+
+    }
+
+    function Update() {
+        $('#modalUpdate').modal('toggle');
+        var idRegistro = $('#id_empleado').text();
+        var nombre = $("#nombre_empleado").val();
+        var apellidos = $("#apellidos_empleado").val();
+        var fecha_nacimiento = $("#fn_empleado").val();
+        var str = $("#txtNombre").val();
+        $.ajax({
+            type: "POST",
+            url: "empleados.jsp",
+            data: {"idRegistro": idRegistro, "nombre_empleado": nombre, "apellidos_empleado": apellidos, "fecha_nacimiento": fecha_nacimiento, "str": str, "accion": "update"}
+        }).done(function (response) {
+            var result = JSON.parse(response);
+            if (result.status == 'ok') {
+                $("#divResult").html(result.html);
+            } else {
+                $("#divResult").html(result.mensaje);
+            }
+        });
+    }
+
+    function Añadir() {
+        $('#modalUpdate').modal('toggle');
+        var nombre_empleado = $("#nombre_empleado_vacio").val();
+        var apellidos_empleado = $("#apellidos_empleado_vacio").val();
+        var fecha_nacimiento = $("#fn_empleado_vacio").val();
+        var str = $("#txtNombre").val();
+        $.ajax({
+            type: "POST",
+            url: "empleados.jsp",
+            data: {"nombre_empleado": nombre_empleado, "apellidos_empleado": apellidos_empleado, "fecha_nacimiento": fecha_nacimiento, "str": str, "accion": "create"}
+        }).done(function (response) {
+            var result = JSON.parse(response);
+            if (result.status == 'ok') {
+                $("#divResult").html(result.html);
+            } else {
+                $("#divResult").html(result.mensaje);
+            }
+        });
+    }
+
+$('#modalUpdate').on('show.bs.modal', function (event) {
+    var a = $(event.relatedTarget) // Button that triggered the modal
+    var id = a.data('id') // Extract info from data-* attributes
+    var nombre = a.data('nombre') // Extract info from data-* attributes
+    var apellidos = a.data('apellidos') // Extract info from data-* attributes
+    var fecha_nacimiento = a.data('fecha-nacimiento') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    $('#id_empleado').text(id);
+    $('#nombre_empleado').val(nombre);
+    $('#apellidos_empleado').val(apellidos);
+    $('#fn_empleado').val(fecha_nacimiento);
+
+})
+</script>
+</html>
