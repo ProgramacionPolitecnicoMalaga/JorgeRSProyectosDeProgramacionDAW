@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="fdbdc4a1-c41b-4431-b3f5-899566a6ed87" name="maquinaVirtual" url="http://192.168.0.33">
-        <fileTransfer host="192.168.0.33" port="22" rootFolder="/var/lib/tomcat8/webapps/ROOT" accessType="SFTP">
+      <webServer id="fdbdc4a1-c41b-4431-b3f5-899566a6ed87" name="maquinaVirtual" url="http://192.168.10.60">
+        <fileTransfer host="192.168.10.60" port="22" rootFolder="/var/lib/tomcat8/webapps/ROOT" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

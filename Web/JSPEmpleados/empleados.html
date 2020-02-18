@@ -9,7 +9,7 @@
 </head>
 <body>
 <form>
-    <div class="form-row align-items-center">
+    <div class="form-row align-items-center" style="padding: 15px">
         <div class="col-auto">
             <label class="sr-only" for="txtNombre">Name</label>
             <input type="text" class="form-control mb-2" id="txtNombre" placeholder="Nombre empleado">
@@ -71,13 +71,8 @@
         </div>
     </div>
 </form>
-</body>
 <script>
-    let create = false;
-    let modify=true;
     function MostrarCrear() {
-        create=true;
-        modify=false;
         $("#modal-body").css("display", "none");
         $("#btnUpdate").css("display", "none");
         $("#modal-body2").css("display", "block");
@@ -85,14 +80,12 @@
     }
 
     function MostrarModificar() {
-        create=false;
-        modify=true;
         $("#modal-body").css("display", "block");
         $("#btnUpdate").css("display", "block");
         $("#modal-body2").css("display", "none");
         $("#btnCreate").css("display", "none");
     }
-    
+
     function Consultar() {
         var str = $("#txtNombre").val();
         $("#butEnviar").attr("disabled", true);
@@ -169,19 +162,20 @@
         });
     }
 
-$('#modalUpdate').on('show.bs.modal', function (event) {
-    var a = $(event.relatedTarget) // Button that triggered the modal
-    var id = a.data('id') // Extract info from data-* attributes
-    var nombre = a.data('nombre') // Extract info from data-* attributes
-    var apellidos = a.data('apellidos') // Extract info from data-* attributes
-    var fecha_nacimiento = a.data('fecha-nacimiento') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    $('#id_empleado').text(id);
-    $('#nombre_empleado').val(nombre);
-    $('#apellidos_empleado').val(apellidos);
-    $('#fn_empleado').val(fecha_nacimiento);
+    $('#modalUpdate').on('show.bs.modal', function (event) {
+        var a = $(event.relatedTarget) // Button that triggered the modal
+        var id = a.data('id') // Extract info from data-* attributes
+        var nombre = a.data('nombre') // Extract info from data-* attributes
+        var apellidos = a.data('apellidos') // Extract info from data-* attributes
+        var fecha_nacimiento = a.data('fecha-nacimiento') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        $('#id_empleado').text(id);
+        $('#nombre_empleado').val(nombre);
+        $('#apellidos_empleado').val(apellidos);
+        $('#fn_empleado').val(fecha_nacimiento);
 
-})
+    })
 </script>
+</body>
 </html>
