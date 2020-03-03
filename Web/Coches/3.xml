@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+    <medata>
+        <url>https://www.km77.com/page/3</url>
+        <date>2020-04-01 10:05:15</date>
+        <user>daw</user>
+    </medata>
+    <listCars>
+        <car name="">
+            <urlImage></urlImage>
+            <text><![CDATA[]]></text>
+            <publishDate></publishDate>
+        </car>
+    </listCars>
+</cars>

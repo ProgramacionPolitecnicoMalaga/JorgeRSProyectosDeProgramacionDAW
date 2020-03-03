@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0048)http://vps456458.ovh.net:8080/coches/coches.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+    <link href="./coches_files/bootstrap.min.css" rel="stylesheet">
+    <script src="./coches_files/jquery-3.3.1.min.js.descarga"></script>
+    <link rel="stylesheet" href="./coches_files/jquery-ui.min.css">
+    <script src="./coches_files/bootstrap.min.js.descarga"></script>
+    <script src="./coches_files/jquery-ui.min.js.descarga"></script>
+    <style>
+        * {
+            margin-left: 10px
+        }
+    </style>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-9">
+        <form class="form-inline">
+            <div class="form-group  mb-2">
+                <label for="txtNumero" class="sr-only">Número de página</label>
+                <input type="text" class="form-control" id="txtNumero" placeholder="número">
+            </div>
+            <div class="form-group  mb-2">
+                <button type="button" class="btn btn-primary mb-2" onclick="ver()">Visualizar</button>
+            </div>
+            <div class="form-group  mb-2">
+                <button type="button" class="btn btn-success mb-2" onclick="descargar()">Descargar</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-4">
+        <iframe id="frame" height="640px" width="500px" src="./coches_files/saved_resource.html"></iframe>
+    </div>
+    <div class="col-6">
+        <textarea id="txtXML" rows="26" cols="90"></textarea>
+    </div>
+</div>
+
+<script>
+    var dataDir, url, url_data;
+    $(document).ready(function () {
+        $.getJSON("config.json", function (data) {
+            dataDir = data.data;
+            url = data.url;
+            url_data = data.url_data;
+        });
+    });
+
+    function ver() {
+        var num = $("#txtNumero").val();
+        $("#frame").attr("src", url_data + num);
+    }
+
+    function descargar() {
+        var numero = $("#txtNumero").val();
+        $.ajax({
+            type: "POST",
+            url: "coches.jsp",
+            data: {"numero": numero, "dataDir": dataDir, "url_data": url_data}
+        }).done(function (response) {
+            $("#txtXML").html(response);
+        });
+    }
+</script>
+</body></html>
