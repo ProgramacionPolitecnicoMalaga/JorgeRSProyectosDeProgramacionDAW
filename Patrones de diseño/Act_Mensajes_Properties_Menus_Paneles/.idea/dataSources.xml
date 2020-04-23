@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="VPS_Logins" uuid="b46400f6-25d7-4f1f-9099-67514060e3e2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://89.36.212.72:3306/Usuarios</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="CET" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
