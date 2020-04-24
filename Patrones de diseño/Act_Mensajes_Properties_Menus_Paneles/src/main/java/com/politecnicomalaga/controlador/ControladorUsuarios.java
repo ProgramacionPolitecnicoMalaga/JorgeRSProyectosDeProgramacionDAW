@@ -18,10 +18,10 @@ public class ControladorUsuarios {
     ResultSet resultSet;
     Propiedades propiedades;
 
-    public ControladorUsuarios() throws SQLException, IOException {
+    public ControladorUsuarios(Propiedades propiedades) throws SQLException, IOException {
         credencialesDAO = new CredencialesDAO();
         resultSet = credencialesDAO.obtenerResultSetCredencialesBD();
-        propiedades = new Propiedades();
+        this.propiedades=propiedades;
     }
 
     public ArrayList generarListadoRemitentes() throws SQLException {
@@ -67,9 +67,9 @@ public class ControladorUsuarios {
         propiedades.guardar();
     }
 
-    public String getIdDeDestinatarioPorNombre(ArrayList<Usuario> listaDestinatarios, String nombreDestinatario){
+    public String getIdDeDestinatarioPorNombre(String nombreDestinatario) throws SQLException {
         String idDestinatario="";
-        for (Usuario usuario:listaDestinatarios){
+        for (Usuario usuario:(ArrayList<Usuario>)generarListadoRemitentes()){
             if (usuario.getNombre().equals(nombreDestinatario)){
                 idDestinatario=usuario.getId();
             }
@@ -77,7 +77,9 @@ public class ControladorUsuarios {
         return idDestinatario;
     }
 
-    public Propiedades getPropiedades(){
+    /*public Propiedades getPropiedades(){
         return propiedades;
     }
+
+     */
 }

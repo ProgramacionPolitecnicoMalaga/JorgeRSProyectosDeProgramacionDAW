@@ -39,7 +39,7 @@ public class ControladorMensajes {
     public void enviarMensaje(String tituloDelMensaje, String textoDelMensaje, String idDestinatario) throws SQLException {
         Calendar fecha = new GregorianCalendar();
         int año = fecha.get(Calendar.YEAR);
-        int mes = fecha.get(Calendar.MONTH);
+        int mes = fecha.get(Calendar.MONTH)+1;
         int dia = fecha.get(Calendar.DAY_OF_MONTH);
         String fechaMensaje = dia + "/" + mes + "/" + año;
         mensajesDAO.insertarMensaje(new Mensaje(tituloDelMensaje, textoDelMensaje, idDestinatario, propiedades.getPropiedad("Usuario"), fechaMensaje));

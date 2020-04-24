@@ -1,5 +1,6 @@
 package com.politecnicomalaga.vista;
 
+import com.politecnicomalaga.configuracion.Propiedades;
 import com.politecnicomalaga.controlador.ControladorMensajes;
 import com.politecnicomalaga.controlador.ControladorUsuarios;
 
@@ -19,10 +20,12 @@ public class PanelPrincipal implements Multipanel{
     private JMenuItem menuItCerrar;
     private ControladorUsuarios controladorUsuarios;
     private ControladorMensajes controladorMensajes;
+    private Propiedades propiedades;
 
     public PanelPrincipal() throws SQLException, IOException {
-        controladorUsuarios = new ControladorUsuarios();
-        controladorMensajes = new ControladorMensajes(controladorUsuarios.getPropiedades());
+        propiedades=new Propiedades();
+        controladorUsuarios = new ControladorUsuarios(propiedades);
+        controladorMensajes = new ControladorMensajes(propiedades);
         PanelLogin panelLogin = new PanelLogin(this, controladorUsuarios);
         PanelLecturaMensajes panelLecturaMensajes = new PanelLecturaMensajes(this, controladorMensajes);
         PanelEscrituraMensajes panelEscrituraMensajes = new PanelEscrituraMensajes(this, controladorUsuarios, controladorMensajes);

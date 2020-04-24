@@ -27,12 +27,17 @@ public class PanelEscrituraMensajes {
         this.panelPrincipal=panelPrincipal;
         this.controladorUsuarios=controladorUsuarios;
         this.controladorMensajes=controladorMensajes;
-        ArrayList<Usuario> listaDestinatarios=controladorUsuarios.generarListadoRemitentes();
         pnlEscritura.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentShown(ComponentEvent e) {
-                for (Usuario usuario:listaDestinatarios){
-                    cmbDestinatarios.addItem(usuario.getNombre());
+                ArrayList<Usuario> listaDestinatarios= null;
+                try {
+                    listaDestinatarios = generarListadoRemitentes(controladorUsuarios);
+                    for (Usuario usuario:listaDestinatarios){
+                        cmbDestinatarios.addItem(usuario.getNombre());
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
                 }
             }
 
@@ -49,8 +54,9 @@ public class PanelEscrituraMensajes {
             public void actionPerformed(ActionEvent e) {
                 String tituloMensaje = txtTitulo.getText();
                 String textoDelMensaje = txtAreaMensaje.getText();
-                String nombreDestinatario = controladorUsuarios.getIdDeDestinatarioPorNombre(listaDestinatarios, (String)cmbDestinatarios.getSelectedItem());
+                String nombreDestinatario = null;
                 try {
+                    nombreDestinatario = controladorUsuarios.getIdDeDestinatarioPorNombre((String)cmbDestinatarios.getSelectedItem());
                     controladorMensajes.enviarMensaje(tituloMensaje, textoDelMensaje, nombreDestinatario);
                     mensajeConfirmacionDeEnvio(e);
                 } catch (SQLException ex) {
@@ -67,5 +73,9 @@ public class PanelEscrituraMensajes {
 
     public void mensajeConfirmacionDeEnvio (ActionEvent e){
         JOptionPane.showMessageDialog(SwingUtilities.getRoot((Component) e.getSource()), "El mensaje ha sido enviado con éxito.");
+    }
+
+    public ArrayList generarListadoRemitentes(ControladorUsuarios controladorUsuarios) throws SQLException {
+        return controladorUsuarios.generarListadoRemitentes();
     }
 }
