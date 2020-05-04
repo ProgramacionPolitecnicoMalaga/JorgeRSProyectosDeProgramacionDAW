@@ -4,6 +4,8 @@ import com.politecnicomalaga.servicioBuilder.ServicioBuilder;
 import com.politecnicomalaga.servicioComposite.Paquete;
 import com.politecnicomalaga.servicioComposite.Servicio;
 
+import java.util.Iterator;
+
 public class App {
     public static void main(String[] args) {
 
@@ -34,5 +36,8 @@ public class App {
         System.out.println("El precio del servicio ilink1.1 es de " + ((Paquete) servicioPrincipal).getServicioPorNombre("iLink_1.1").obtenerPrecioDeServicio() + "€" + "\n");
         System.out.println("El precio del servicio ilink1 es de " + servicioPrincipal.obtenerPrecioDeServicio() + "€" + "\n");
         System.out.println("El precio del servicio cloud es de " + ((Paquete) servicioPrincipal).getServicioPorNombre("CloudSolutions_1").obtenerPrecioDeServicio() + "€");
+        ((Paquete) servicioPrincipal).borrarServicioPorNombre("Rack_1", ((Paquete) servicioPrincipal).getListaServicios());
+        System.out.println("La estructura contratada ilink1 quedaría de la siguiente forma despues del borrado del servicio Rack_1: \n" + servicioPrincipal.toString() + "\n");
+        //System.out.println("El precio del servicio rack1 es de " + ((Paquete) servicioPrincipal).getServicioPorNombre("Rack_1").obtenerPrecioDeServicio() + "€" + "\n");
     }
 }

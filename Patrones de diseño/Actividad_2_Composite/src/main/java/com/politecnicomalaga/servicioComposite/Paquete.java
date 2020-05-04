@@ -1,12 +1,14 @@
 package com.politecnicomalaga.servicioComposite;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class Paquete implements Servicio{
 
     private String nombre;
-    private double precio;
+    private Double precio;
     private List<Servicio> listaServiciosIncluidos;
 
     public Paquete(String nombre, double precio){
@@ -25,6 +27,14 @@ public class Paquete implements Servicio{
 
     public double getPrecio() {
         return precio;
+    }
+
+    public void remove(int indice) {
+        listaServiciosIncluidos.remove(indice);
+    }
+
+    public List getListaServicios(){
+        return listaServiciosIncluidos;
     }
 
     public void addServicioAPaquete(Servicio servicio){
@@ -75,5 +85,30 @@ public class Paquete implements Servicio{
                 return servicio;
         }
         return null;
+    }
+
+    public void borrarServicioPorNombre(String nombreServicio, List listaServiciosIncluidos) {
+        for (int i=0; i<listaServiciosIncluidos.size(); i++) {
+            Servicio servicio = (Servicio)listaServiciosIncluidos.get(i);
+            if (servicio.getTipo() == Servicio.PAQUETE){
+                if (servicio!=null && ((Paquete) servicio).getNombre().equals(nombreServicio)) {
+                    listaServiciosIncluidos.remove(i);
+                } else
+                    borrarServicioPorNombre(nombreServicio, ((Paquete) servicio).getListaServicios());
+            }
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Paquete paquete = (Paquete) o;
+        return nombre.equals(paquete.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
     }
 }
