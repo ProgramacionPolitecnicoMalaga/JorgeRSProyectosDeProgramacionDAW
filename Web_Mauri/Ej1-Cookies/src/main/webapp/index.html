@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color de fondo</title>
+</head>
+<body>
+    <p>Elige un color de fondo</p>
+    <form>
+        <input type="color" id="color" name="color"/>
+        <button id="enviar_color">Enviar</button>
+    </form>
+
+    <script type="text/javascript">
+        var btnEnviarColor = document.getElementById("enviar_color");
+        var inputColor = document.getElementById("color");
+
+        btnEnviarColor.addEventListener("click",function(e){
+            e.preventDefault();
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","color",true);
+            xhr.onreadystatechange = function(){
+                if ((xhr.readyState == 4) && (xhr.status == 200)){
+                    let jsonRecibido = JSON.parse(xhr.responseText);
+                    if (jsonRecibido.status == "ok") {
+                        let body = document.getElementsByTagName("BODY")[0];
+                        body.style.backgroundColor = jsonRecibido.color;
+                    }
+                }
+            }
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.send(JSON.stringify({color:inputColor.value}));
+        })
+
+        window.addEventListener("load",function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","colorElegido",true);
+            xhr.onreadystatechange = function(){
+                if ((xhr.readyState == 4) && (xhr.status == 200)){
+                    console.log(xhr.responseText);
+                    let jsonRecibido = JSON.parse(xhr.responseText);
+                    if (jsonRecibido.status == "ok") {
+                        console.log(jsonRecibido.color);
+                        let body = document.getElementsByTagName("BODY")[0];
+                        body.style.backgroundColor = jsonRecibido.color;
+                    }
+                }
+            }
+            xhr.send();
+        })
+    </script>
+</body>
+</html>

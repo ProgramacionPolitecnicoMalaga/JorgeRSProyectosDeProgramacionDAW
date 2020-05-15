@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sesiones</title>
+</head>
+
+<body>
+Nombre <input type="text" id="txtNombre" name="nombre"/><br>
+Apellidos <input type="text" id="txtApellidos" name="apellidos"/><br>
+Edad <input type="number" id="txtEdad" name="edad"/><br>
+<button id="btnInsertar">Insertar</button>
+
+<div id="resultado"></div>
+
+<script type="text/javascript">
+    var txtNombre = document.getElementById("txtNombre");
+    var txtApellidos = document.getElementById("txtApellidos");
+    var txtEdad = document.getElementById("txtEdad");
+    var btnInsertar = document.getElementById("btnInsertar");
+    var resultado = document.getElementById("resultado");
+
+    btnInsertar.addEventListener("click",function(){
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST","sesion",true);
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            console.log(xhr.status);
+            if ((xhr.readyState == 4) && (xhr.status == 200)) {
+                console.log(xhr.responseText);
+                resultado.innerHTML = xhr.response;
+            }
+        }
+        xhr.setRequestHeader('Content-type',"application/json; charset=utf-8");
+        xhr.send(JSON.stringify({nombre:txtNombre.value, apellidos:txtApellidos.value, edad:txtEdad.value}));
+    })
+
+    window.addEventListener("load",function(){
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET","sesion",true);
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            console.log(xhr.status);
+            if ((xhr.readyState == 4) && (xhr.status == 200)) {
+                console.log(xhr.responseText);
+                resultado.innerHTML = xhr.response;
+            }
+        }
+        xhr.send();
+    })
+</script>
+</body>
+</html>

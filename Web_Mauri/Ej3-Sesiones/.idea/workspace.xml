@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Ej3-Sesiones:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="804189cd-6d36-40c0-9302-52d8d657f5d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Entornos de Desarrollo/Maven" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1brTBFoernyFO6ucdBw81yG4396" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="HOST" value="89.36.212.72" />
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://89.36.212.72:8080/Ej3_Sesiones_war/" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="Ej3-Sesiones:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Ej3_Sesiones_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="37d1d626-3b2e-4d73-a8e9-4edb22c28ea1" />
+                    <id>37d1d626-3b2e-4d73-a8e9-4edb22c28ea1</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="37d1d626-3b2e-4d73-a8e9-4edb22c28ea1" />
+                    <id>37d1d626-3b2e-4d73-a8e9-4edb22c28ea1</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="/" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="8efb6eb1-5089-4da5-bd19-5458d061ab86" />
+                    <id>8efb6eb1-5089-4da5-bd19-5458d061ab86</id>
+                  </TransportTarget>
+                </option>
+                <staging-path>/</staging-path>
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="8efb6eb1-5089-4da5-bd19-5458d061ab86" />
+                    <id>8efb6eb1-5089-4da5-bd19-5458d061ab86</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="e64a51cd-0d77-4408-81a7-0a0f3433f1a8" />
+          <host-id>e64a51cd-0d77-4408-81a7-0a0f3433f1a8</host-id>
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54273" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Ej3-Sesiones:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="804189cd-6d36-40c0-9302-52d8d657f5d1" name="Default Changelist" comment="" />
+      <created>1589389074500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589389074500</updated>
+      <workItem from="1589389077298" duration="2676000" />
+      <workItem from="1589444886532" duration="7162000" />
+      <workItem from="1589481645054" duration="242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1589447909958">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447909958" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589447978078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447978078" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1589447612976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447612976" />
+    <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1589447362962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447362962" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589391124410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589391124410" />
+    <state width="1293" height="191" key="GridCell.Tab.0.bottom" timestamp="1589481886527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589481886527" />
+    <state width="1293" height="191" key="GridCell.Tab.0.center" timestamp="1589481886527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589481886527" />
+    <state width="1293" height="191" key="GridCell.Tab.0.left" timestamp="1589481886527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589481886527" />
+    <state width="1293" height="191" key="GridCell.Tab.0.right" timestamp="1589481886527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589481886527" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1589447377248">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447377248" />
+    <state x="768" y="250" key="ftp.server.browser" timestamp="1589447903751">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="768" y="250" key="ftp.server.browser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589447903751" />
+    <state x="817" y="413" key="publish.login" timestamp="1589481786956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="817" y="413" key="publish.login/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589481786956" />
+  </component>
+</project>
